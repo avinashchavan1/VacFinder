@@ -1,0 +1,217 @@
+.App {
+  text-align: center;
+  background-color: #efefef;
+  font-family: Verdana, Tahoma, sans-serif, Georgia, "Times New Roman", Times,
+    serif;
+}
+body {
+  background-color: #efefef;
+}
+.css-2b097c-container {
+  box-shadow: 7px -5px 11px 2px rgb(80 76 76 / 40%);
+}
+.react-calendar {
+  box-shadow: 7px -5px 11px 2px rgb(80 76 76 / 40%);
+}
+.App-logo {
+  height: 11vmin;
+  pointer-events: none;
+}
+.App-body {
+  animation: 1s ease-out 0s 1 slideInFromLeft1;
+
+  /* height: 80vmin; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* @media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 10s linear;
+  }
+} */
+.Start-Message {
+  text-align: center;
+  animation: 0.5s ease-out 0s 1 slideInFromLeft1;
+}
+.Paid-Feetype {
+  background-color: rgb(216, 200, 61);
+}
+/* .Select-Box {
+  padding: 1rem;
+} */
+
+.App-header {
+  background-color: #dbe2dc;
+  padding: 1rem;
+  animation: 1s ease-out 0s 1 slideInFromLeft1;
+
+  /* min-height: 10vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(22px + 2vmin);
+  color: #2b3329;
+}
+@media screen and (min-width: 415px) {
+  .App-header {
+    flex-direction: row;
+  }
+}
+.App-link {
+  color: #61dafb;
+}
+.Amount {
+  text-align: left;
+  background-color: rgb(241 241 241);
+  border-radius: 20%;
+  width: max-content;
+  padding: 1%;
+  box-shadow: 19px 3px 20px 2px rgb(192 135 135 / 40%);
+}
+.AmountPaid {
+  text-align: left;
+  background-color: rgb(249 231 239);
+  border-radius: 10%;
+  width: max-content;
+  padding: 1%;
+  box-shadow: -19px 3px 20px 2px rgb(192 135 135 / 40%);
+}
+
+.Search-result {
+  /* margin: 2rem auto; */
+
+  display: grid;
+
+  /* max-width: 1170px; */
+  gap: 3rem;
+  background-color: #efefef;
+  word-spacing: 0.3 rem;
+  letter-spacing: 0.1rem;
+  padding: 1rem;
+}
+@media screen and (min-width: 750px) {
+  .Search-result {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+@media screen and (min-width: 500px) {
+  .Search-result {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1000px) {
+  .Search-result {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.SlotRoot {
+  animation: 0.5s ease-out 0s 1 slideInFromLeft;
+
+  /* background: #d9ece8; */
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  text-align: center;
+  font-family: "Helvetica", sans-serif;
+  /* box-shadow: 0 4px 2px -2px rgba(192, 135, 135, 0.4); */
+  box-shadow: 12px 15px 6px rgb(192 135 135 / 40%);
+}
+
+.SlotRootPaid {
+  animation: 0.5s ease-out 0s 1 slideInFromLeft;
+
+  background: #f3dfd3;
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  text-align: center;
+  font-family: "Helvetica", sans-serif;
+  /* box-shadow: 0 4px 2px -2px rgba(192, 135, 135, 0.4); */
+  box-shadow: 12px 15px 6px rgb(192 135 135 / 40%);
+}
+.Slots {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.Timing {
+  background-color: rgb(225 255 223);
+  margin: 0.35rem;
+  width: 80%;
+  border-radius: 10px;
+  padding: 0.3rem;
+  /* box-shadow: 0 4px 2px -2px rgba(80, 76, 76, 0.4); */
+  box-shadow: 7px -5px 11px 2px rgb(80 76 76 / 40%);
+}
+.VaccineName {
+  margin: 0.35rem;
+}
+.SlotAvailableHeading {
+  margin: 0.35rem;
+}
+.AvailableCapcity {
+  font-weight: 200;
+  margin: 0.35rem;
+}
+.Age {
+  margin: 0.35rem;
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes slideInFromLeft1 {
+  0% {
+    transform: translateY(-300%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* @import url(https://fonts.googleapis.com/css?family=Raleway); */
+/* Colors */
+
+footer {
+  width: 100%;
+  display: inline-block;
+  /* margin: 2em 0; */
+  /* height: 70px; */
+  background-color: #999;
+  animation: 1.5s ease-out 0s 1 slideInFromLeft1;
+}
+footer .copyright {
+  width: 50%;
+  float: left;
+}
+@media (max-width: 600px) {
+  footer .copyright {
+    width: 100%;
+  }
+}
+footer .copyright p {
+  padding-left: 10%;
+  color: white;
+  font-size: 1em;
+  line-height: 70px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+@media (max-width: 600px) {
+  footer .copyright p {
+    text-align: center;
+  }
+}
