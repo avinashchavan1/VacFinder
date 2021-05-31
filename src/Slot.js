@@ -31,7 +31,10 @@ export function SlotComponent(props) {
   if (freeflag) {
     return (
       <div className="SlotRoot">
-        <div className="Amount"> {fee_type}</div>
+        <div className="Amount">
+          {" "}
+          <b>{fee_type}</b>
+        </div>
         <div className="VaccineName">
           {" "}
           <h2>{vaccine}</h2>
@@ -61,7 +64,10 @@ export function SlotComponent(props) {
   } else {
     return (
       <div className="SlotRootPaid">
-        <div className="AmountPaid"> {"Rs." + fee + " Per/Dose"}</div>
+        <div className="AmountPaid">
+          {" "}
+          <b>{"Rs." + fee + " Per/Dose"}</b>
+        </div>
         <div className="VaccineName">
           {" "}
           <h2>{vaccine}</h2>

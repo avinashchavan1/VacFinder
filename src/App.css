@@ -79,7 +79,7 @@ body {
 }
 .AmountPaid {
   text-align: left;
-  background-color: rgb(249 231 239);
+  /* background-color: rgb(249 231 239); */
   border-radius: 10%;
   width: max-content;
   padding: 1%;
