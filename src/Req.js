@@ -44,10 +44,10 @@ export function AppHeader() {
   return (
     <header className="App-header">
       {/* <img src={logo} className="App-logo" alt="logo" /> */}
-      <div class="main">
-        <h1 class="main-heading">
-          <span class="main-heading-primary">Covid-19 Vaccine </span>
-          <span class="main-heading-secondary"> Availibility Checker</span>
+      <div className="main">
+        <h1 className="main-heading">
+          <span className="main-heading-primary">Covid-19 Vaccine </span>
+          <span className="main-heading-secondary"> Availibility Checker</span>
         </h1>
       </div>
     </header>
