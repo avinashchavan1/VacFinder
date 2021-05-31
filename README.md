@@ -1,5 +1,5 @@
 ### VacFinder
-Vac finder is a web based tool that will help you find vaccince slots available all over India
+Vac finder is a web based tool that will help you find vaccince slots available all over India.\
 [Click here](https://vaccineindia.netlify.app/) to check out.
 Fork the repo and play around
 ## Available Scripts
