@@ -1,4 +1,4 @@
-import logo from "./vaclogo.svg";
+// import logo from "./vaclogo.svg";
 export const months = {
   jan: "01",
   feb: "02",
@@ -43,8 +43,13 @@ export async function getcontents(id, dateData) {
 export function AppHeader() {
   return (
     <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <p>Covid-19 Vaccine Availibility Checker</p>
+      {/* <img src={logo} className="App-logo" alt="logo" /> */}
+      <div class="main">
+        <h1 class="main-heading">
+          <span class="main-heading-primary">Covid-19 Vaccine </span>
+          <span class="main-heading-secondary"> Availibility Checker</span>
+        </h1>
+      </div>
     </header>
   );
 }

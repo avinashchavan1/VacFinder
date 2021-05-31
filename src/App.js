@@ -9,6 +9,10 @@ import { AppHeader, months } from "./Req";
 import { SlotComponent } from "./Slot";
 import axios from "axios";
 
+var date = new Date();
+var maxdate = new Date();
+maxdate.setDate(maxdate.getDate() + 14);
+
 function SearchResult(props) {
   var session = props.session;
   // console.log(session);
@@ -19,13 +23,13 @@ function SearchResult(props) {
   if (sessions === undefined) {
     return (
       <div className="Start-Message">
-        <h1>Please select the slot to view availibility</h1>
+        <h2>Please select the slot to view availibility</h2>
       </div>
     );
   } else if (sessions === "[]") {
     return (
       <div className="Search-result">
-        <h1>No slot Available</h1>
+        <h2>No slot Available</h2>
       </div>
     );
   }
@@ -44,7 +48,7 @@ function SearchResult(props) {
   if (SizeCount === 0) {
     return (
       <div className="Start-Message">
-        <h1>No Slots Available</h1>
+        <h2>No Slots Available</h2>
       </div>
     );
   }
@@ -147,7 +151,12 @@ function App() {
             />
           </div>
           <div style={{ width: 300, marginBottom: 40 }}>
-            <Calendar onChange={handleCalenderChange} value={cal} />
+            <Calendar
+              minDate={date}
+              maxDate={maxdate}
+              onChange={handleCalenderChange}
+              value={cal}
+            />
           </div>
           {/* <div>
             <b>Link:</b> {country && lang && cal ? link : "-"}
