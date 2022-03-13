@@ -63,7 +63,11 @@ const DataInput = ({ handleChangeResponseData }) => {
   };
 
   return (
-    <Space direction="vertical" size={"large"} style={{ margin: "16px 0" }}>
+    <Space
+      direction="vertical"
+      size={"large"}
+      style={{ margin: "40px 0", padding: "0 2vw" }}
+    >
       <Select
         placeholder={"Select State Name"}
         style={{ width: 200 }}

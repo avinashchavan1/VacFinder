@@ -5,16 +5,13 @@ import "./index.css";
 import { Layout, Menu, Divider } from "antd";
 import Slots from "./components/Slots/Slots";
 import { useState } from "react";
+import Page404 from "./components/Page404/Page404";
+import Welcome from "./components/Welcome/Welcome";
 
 const { Header, Content, Footer } = Layout;
-// const DataInput = require("./components/DataInput/DataInput");
-// const DataInput = () => {
-//   return <h1>1111</h1>;
-// };
 const App = () => {
-  // return <DataInput></DataInput>;
   // const [responseData, setResponseData] = useState([]);
-  const [filteredData, setFilteredData] = useState([]);
+  const [filteredData, setFilteredData] = useState();
   // useEffect(() => {
   //   console.log("ResData: ", responseData);
   // }, [responseData]);
@@ -38,7 +35,13 @@ const App = () => {
           handleChangeResponseData={handleChangeResponseData}
         ></DataInput>
         <Divider />
-        <Slots filteredData={filteredData}></Slots>
+        {/* {console.log(filteredData)} */}
+        {filteredData === undefined && <Welcome />}
+        {filteredData !== undefined && filteredData.length === 0 && <Page404 />}
+
+        {filteredData !== undefined && filteredData.length > 0 && (
+          <Slots filteredData={filteredData}></Slots>
+        )}
       </Content>
       <Divider />
       <Footer style={{ textAlign: "center" }}>
