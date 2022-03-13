@@ -4,11 +4,15 @@ import "antd/dist/antd.css";
 import { Table, Button, Space } from "antd";
 import Slot from "../Slot/Slot";
 import dataRaw from "../../session.json";
-const data = dataRaw["sessions"];
+
+let datasessions = dataRaw["sessions"];
+datasessions = datasessions.map((ele, i) => {
+  return { ...ele, key: i };
+});
+const data = datasessions;
 const areaSet = new Set();
 const typeSet = new Set();
 const feeSet = new Set();
-console.log(data);
 const convertToFilterData = (data) => {
   let result = [];
   data.forEach((element) => result.push({ text: element, value: element }));
@@ -26,7 +30,7 @@ const areaFilter = convertToFilterData(areaSet);
 const typeFilter = convertToFilterData(typeSet);
 const feeFilter = convertToFilterData(feeSet);
 
-// console.log(areaFilter, typeFilter, feeFilter);
+console.log(areaFilter, typeFilter, feeFilter);
 
 const Slots = ({ filteredData }) => {
   const [filteredInfo, setFilteredInfo] = useState();
@@ -52,7 +56,7 @@ const Slots = ({ filteredData }) => {
       key: "block_name",
       filters: areaFilter,
       filteredValue: filteredInfonew.name || null,
-      onFilter: (value, record) => record.address.includes(value),
+      onFilter: (value, record) => record.block_name.includes(value),
       sorter: (a, b) => a.age - b.age,
       sortOrder:
         sortedInfonew.columnKey === "block_name" && sortedInfonew.order,
