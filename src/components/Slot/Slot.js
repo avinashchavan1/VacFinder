@@ -1,16 +1,7 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import "antd/dist/antd.css";
-import { Card, Col, Row, Badge, Space, Divider } from "antd";
-import { MessageOutlined, LikeOutlined, StarOutlined } from "@ant-design/icons";
+import { Card, Col, Badge } from "antd";
 
-const { Meta } = Card;
-const IconText = ({ icon, text }) => (
-  <Space>
-    {React.createElement(icon)}
-    {text}
-  </Space>
-);
 const Slot = ({ session }) => {
   // return <DataInput></DataInput>;
   // console.log(session);

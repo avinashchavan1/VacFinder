@@ -1,8 +1,7 @@
-import { DatePicker, Select, Space, Divider } from "antd";
+import { DatePicker, Select, Space } from "antd";
 import "antd/dist/antd.css";
 import data from "../../data2.json";
 import React, { useState, useEffect } from "react";
-import moment from "moment";
 
 const statesData = data.map((state) => {
   return { state_id: state["state_id"], state_name: state["state"] };
@@ -34,11 +33,11 @@ const DataInput = ({ handleChangeResponseData }) => {
         "&date=" +
         currDate +
         "\n";
-      console.log(URL);
+      // console.log(URL);
       fetch(URL)
         .then((res) => res.json())
         .then((res) => {
-          console.log(res);
+          // console.log(res);
           handleChangeResponseData(res);
         })
         .catch((err) => console.log(err));

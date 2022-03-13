@@ -1,26 +1,25 @@
 import DataInput from "./components/DataInput/DataInput";
 import React from "react";
-import ReactDOM from "react-dom";
 import "antd/dist/antd.css";
 import "./index.css";
-import { Layout, Menu, Breadcrumb, Divider } from "antd";
+import { Layout, Menu, Divider } from "antd";
 import Slots from "./components/Slots/Slots";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-const { Header, Content, Footer, Sider } = Layout;
+const { Header, Content, Footer } = Layout;
 // const DataInput = require("./components/DataInput/DataInput");
 // const DataInput = () => {
 //   return <h1>1111</h1>;
 // };
 const App = () => {
   // return <DataInput></DataInput>;
-  const [responseData, setResponseData] = useState([]);
+  // const [responseData, setResponseData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
-  useEffect(() => {
-    console.log("ResData: ", responseData);
-  }, [responseData]);
+  // useEffect(() => {
+  //   console.log("ResData: ", responseData);
+  // }, [responseData]);
   const handleChangeResponseData = (value) => {
-    setResponseData(value["sessions"]);
+    // setResponseData(value["sessions"]);
     setFilteredData(value["sessions"]);
   };
   return (
