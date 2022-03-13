@@ -42,7 +42,7 @@ const DataInput = ({ handleChangeResponseData }) => {
         })
         .catch((err) => console.log(err));
     }
-  }, [state, district, currDate]);
+  }, [state, district, currDate]); // eslint-disable-line react-hooks/exhaustive-deps
 
   function onChange(date) {
     setCurrDate(date.format("DD-MM-YYYY"));
